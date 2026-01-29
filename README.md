@@ -1,11 +1,11 @@
 # Identificação do Projeto de Redes
 ## Nome dos Técnicos responsáveis:
--Enzo Emanuel Maia Costa
--Ewerton Luís Souza Anjos
--Leticia Rezende dos Santos
--Pedro Henrique Gomes dos Santos
--Raphael Ferreira Portella Balecar
--Saymon Anderson Vieira Silva
+- Enzo Emanuel Maia Costa
+- Ewerton Luís Souza Anjos
+- Leticia Rezende dos Santos
+- Pedro Henrique Gomes dos Santos
+- Raphael Ferreira Portella Balecar
+- Saymon Anderson Vieira Silva
 
 ## Resumo descritivo
 
