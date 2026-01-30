@@ -1,1 +1,301 @@
+html {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
 
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: "MuseoModerno", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f4f8; 
+    color: #333;
+}
+
+header {
+    background-color: #0f172a; 
+    color: white;
+    padding: 15px 5%;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo-area h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: #38bdf8; 
+}
+
+.logo-area p {
+    margin: 5px 0 0 0;
+    font-size: 0.8rem;
+    opacity: 0.8;
+    font-weight: 400;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; 
+    gap: 25px; 
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #e2e8f0;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.nav-links li a:hover {
+    color: #2dd4bf; 
+}
+
+.hero {
+    background-image: linear-gradient(to bottom, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.7)), url('fundo.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.hero-content {
+    max-width: 800px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.5rem; 
+    font-weight: 800;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1.1;
+    text-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 45px;
+    opacity: 0.95;
+    font-weight: 300;
+}
+
+.btn-hero {
+    display: inline-block;
+    background-color: #0d9488; 
+    color: #ffffff;
+    padding: 18px 45px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 50px; 
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(13, 148, 136, 0.3); 
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-hero:hover {
+    background-color: #14b8a6; 
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(20, 184, 166, 0.4);
+}
+
+main {
+    scroll-margin-top: 80px;
+}
+
+.galeria {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    padding: 80px 20px;
+    gap: 60px;
+}
+
+.imagem-container {
+    width: 100%; 
+    max-width: 1000px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 20px 40px -10px rgba(0,0,0,0.1); 
+    text-align: center;
+    padding: 40px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+    scroll-margin-top: 100px; 
+}
+
+.imagem-container:hover {
+    transform: translateY(-5px);
+}
+
+.imagem-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+    margin-bottom: 30px;
+    border: 1px solid #f1f5f9;
+}
+
+.imagem-container h2 {
+    color: #0f172a; 
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+}
+
+.imagem-container p {
+    font-size: 1.1rem;
+    color: #475569; 
+    line-height: 1.8;
+    text-align: justify;
+    padding: 0 20px;
+}
+
+footer {
+    background-color: #0f172a; 
+    color: white;
+    padding: 60px 20px 20px;
+    text-align: center;
+}
+
+.footer-content h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.footer-content p {
+    opacity: 0.7;
+    margin-bottom: 30px;
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: rgba(255,255,255,0.1);
+    padding: 12px 25px;
+    border-radius: 30px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.social-link:hover {
+    background-color: #E1306C; /* Cor oficial do Instagram */
+}
+
+.social-link i {
+    font-size: 1.5rem;
+}
+
+.copyright {
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    font-size: 0.8rem;
+    opacity: 0.5;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- NOVOS ESTILOS DO CARROSSEL --- */
+
+.carousel-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* Botões de Navegação (Estilo igual ao btn-hero) */
+.nav-btn {
+    background-color: #0d9488; 
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(13, 148, 136, 0.3);
+    flex-shrink: 0;
+    z-index: 10;
+}
+
+.nav-btn:hover {
+    background-color: #14b8a6;
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(20, 184, 166, 0.4);
+}
+
+/* Imagem do slide com tamanho controlado */
+#lab-img {
+    margin-bottom: 0;
+    max-height: 500px; 
+    object-fit: contain; /* Garante que a imagem inteira apareça */
+    transition: opacity 0.2s ease-in-out;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .hero h1 { font-size: 2.2rem; }
+    .imagem-container { padding: 20px; }
+    .imagem-container p { padding: 0; text-align: left; }
+
+    /* Ajuste do carrossel no mobile */
+    .carousel-wrapper {
+        flex-wrap: wrap;
+    }
+    .nav-btn {
+        order: 2; /* Botões vão para baixo da imagem no celular */
+        width: 60px; /* Botões maiores para dedo */
+        height: 60px;
+    }
+}
