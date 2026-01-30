@@ -1,1 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Prof Alberto Carvalho - UFS Itabaiana</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=MuseoModerno:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo-area">
+                <h1>UFS Itabaiana</h1>
+                <p>Campus Professor Alberto Carvalho</p>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#visao-geral">O Projeto</a></li>
+                <li><a href="#laboratorios">Laboratórios</a></li>
+                <li><a href="#topologia">Estrutura</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Campus Professor Alberto Carvalho</h1>
+            <p>Conectando Saberes ao Futuro - Uma nova era de infraestrutura digital para impulsionar a vida acadêmica</p>
+            <a href="#visao-geral" class="btn-hero">Conheça o campus</a>
+        </div>
+    </section>
+
+    <main id="visao-geral">
+        <section class="galeria">
+            
+            <div class="imagem-container">
+                <img src="planta.png" alt="Planta do Laboratório 1">
+                <h2>Sobre o Projeto</h2>
+                <p>
+                     Este projeto tem como objetivo o planejamento, a modelagem e a implementação da infraestrutura de redes do Condomínio de Laboratórios do Campus Professor Alberto Carvalho – UFS Itabaiana. O escopo abrange todos os ambientes, contemplando o Laboratório de Geomorfologia, o Laboratório Biota do Nordeste, o Laboratório de Disciplinas Escolares, o Laboratório de Estudos em Filosofia e Literatura, o Laboratório de Estudos Interdisciplinares e o Laboratório de Educação e Movimentos Sociais.
+                </p> 
+                <p>
+                    A proposta visa oferecer uma infraestrutura de rede segura, escalável e adequada às necessidades de pesquisa acadêmica, possibilitando a coleta, o armazenamento, o processamento e a disponibilização de dados sensíveis de forma eficiente.
+                </p>
+            </div>
+
+            <div class="imagem-container" id="laboratorios">
+                <h2 id="lab-nome">Laboratório de Geomorfologia</h2>
+               
+    
+                
+                <div class="carousel-wrapper">
+                    <button class="nav-btn" id="btn-prev" aria-label="Laboratório Anterior">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+            
+                    <img src="lab1.png" alt="Visualização do Laboratório" id="lab-img">
+            
+                    <button class="nav-btn" id="btn-next" aria-label="Próximo Laboratório">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+ <p style="text-align: center; font-size: 0.9rem;">
+                    Navegue pelas setas para conhecer os diferentes ambientes do condomínio.
+                </p>
+                <h4 style="text-align: center; font-size: 0.9rem;" >Cada laboratório contará com um switch gerenciável de 24 portas, responsável por interligar os dispositivos da rede local, garantindo comunicação eficiente e possibilidade de expansão futura. O modelo escolhido foi o Switch Intelbras 24 portas PoE</h4>
+
+               
+            </div>
+
+            <div class="imagem-container" id="topologia">
+                <img src="Topologia.png" alt="Diagrama de Rede">
+                <h2>Topologia da Estrutura Macro</h2>
+                <p>O diagrama ilustra o fluxo de dados e a hierarquia da infraestrutura de TI: A conexão inicia na nuvem "Internet / Backbone UFS", 
+                    passando por um "Roteador de Borda" e um "Firewall Corporativo" até chegar ao Switch Core L3 
+                    (distribuição). À direita, destaca-se o "Data Center Central CCH", contendo um Rack 42U com servidores.</p>
+            </div>
+            
+        </section>
+    </main>
+
+    <footer id="contato">
+        <div class="footer-content">
+            <h3>Fale Conosco</h3>
+            <p>Acompanhe as novidades do Campus Itabaiana nas redes sociais.</p>
+            
+            <a href="https://www.instagram.com/ufs_itabaiana/" target="_blank" class="social-link">
+                <i class="fab fa-instagram"></i> ufs_itabaiana
+            </a>
+            
+            <div class="copyright">
+                <p>&copy; 2026 UFS Itabaiana - Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
