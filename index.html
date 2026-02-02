@@ -7,7 +7,7 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=MuseoModerno:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&family=MuseoModerno:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -25,6 +25,8 @@
                 <li><a href="#visao-geral">O Projeto</a></li>
                 <li><a href="#laboratorios">Laboratórios</a></li>
                 <li><a href="#topologia">Estrutura</a></li>
+                <li><a href="#atas">Atas</a></li>
+                <li><a href="#orcamento">Orçamento</a></li>
                 <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
@@ -42,10 +44,17 @@
         <section class="galeria">
             
             <div class="imagem-container">
-                <img src="planta.png" alt="Planta do Laboratório 1">
+                <img src="planta.png" alt="Planta do Laboratório 1" id="planta-img">
+                
+                <div class="btn-container-center">
+                    <button id="btn-trocar-planta" class="btn-toggle">
+                        <i class="fas fa-sync-alt"></i> Alternar Visualização
+                    </button>
+                </div>
+
                 <h2>Sobre o Projeto</h2>
                 <p>
-                     Este projeto tem como objetivo o planejamento, a modelagem e a implementação da infraestrutura de redes do Condomínio de Laboratórios do Campus Professor Alberto Carvalho – UFS Itabaiana. O escopo abrange todos os ambientes, contemplando o Laboratório de Geomorfologia, o Laboratório Biota do Nordeste, o Laboratório de Disciplinas Escolares, o Laboratório de Estudos em Filosofia e Literatura, o Laboratório de Estudos Interdisciplinares e o Laboratório de Educação e Movimentos Sociais.
+                      Este projeto tem como objetivo o planejamento, a modelagem e a implementação da infraestrutura de redes do Condomínio de Laboratórios do Campus Professor Alberto Carvalho – UFS Itabaiana. O escopo abrange todos os ambientes, contemplando o Laboratório de Geomorfologia, o Laboratório Biota do Nordeste, o Laboratório de Disciplinas Escolares, o Laboratório de Estudos em Filosofia e Literatura, o Laboratório de Estudos Interdisciplinares e o Laboratório de Educação e Movimentos Sociais.
                 </p> 
                 <p>
                     A proposta visa oferecer uma infraestrutura de rede segura, escalável e adequada às necessidades de pesquisa acadêmica, possibilitando a coleta, o armazenamento, o processamento e a disponibilização de dados sensíveis de forma eficiente.
@@ -54,8 +63,6 @@
 
             <div class="imagem-container" id="laboratorios">
                 <h2 id="lab-nome">Laboratório de Geomorfologia</h2>
-               
-    
                 
                 <div class="carousel-wrapper">
                     <button class="nav-btn" id="btn-prev" aria-label="Laboratório Anterior">
@@ -68,20 +75,112 @@
                         <i class="fas fa-chevron-right"></i>
                     </button>
                 </div>
- <p style="text-align: center; font-size: 0.9rem;">
+
+                <p style="text-align: center; font-size: 0.9rem; margin-top: 10px;">
                     Navegue pelas setas para conhecer os diferentes ambientes do condomínio.
                 </p>
-                <h4 style="text-align: center; font-size: 0.9rem;" >Cada laboratório contará com um switch gerenciável de 24 portas, responsável por interligar os dispositivos da rede local, garantindo comunicação eficiente e possibilidade de expansão futura. O modelo escolhido foi o Switch Intelbras 24 portas PoE</h4>
-
                
+                <p id="lab-desc" class="descricao-dinamica">
+                    Carregando descrição...
+                </p>
             </div>
 
             <div class="imagem-container" id="topologia">
-                <img src="Topologia.png" alt="Diagrama de Rede">
-                <h2>Topologia da Estrutura Macro</h2>
-                <p>O diagrama ilustra o fluxo de dados e a hierarquia da infraestrutura de TI: A conexão inicia na nuvem "Internet / Backbone UFS", 
-                    passando por um "Roteador de Borda" e um "Firewall Corporativo" até chegar ao Switch Core L3 
-                    (distribuição). À direita, destaca-se o "Data Center Central CCH", contendo um Rack 42U com servidores.</p>
+                <img src="Topo.png" alt="Diagrama de Rede">
+                <h2>Topologia da Estrutura </h2>
+                <p>"A infraestrutura de rede do Condomínio adota uma Topologia em Estrela Estendida, projetada para alta disponibilidade e escalabilidade. O núcleo da operação é sustentado por um servidor de alto desempenho xFusion 2288H V7, centralizando o processamento de dados de todos os laboratórios. 
+
+A distribuição é segmentada através de 6 Switches gerenciáveis de 24 portas, alocando um equipamento dedicado para cada laboratório (Geomorfologia, Biota, Humanidades, etc.). Isso garante que o tráfego intenso de um laboratório não afete o desempenho dos outros.
+
+A conectividade na ponta é garantida por cabeamento estruturado CAT6 para os 25 desktops de trabalho, assegurando velocidade Gigabit. Além disso, a mobilidade é total: cada ambiente possui seu próprio Access Point alimentado via PoE, oferecendo cobertura Wi-Fi robusta para dispositivos móveis de pesquisadores e alunos."</p>
+            </div>
+
+            <div class="imagem-container" id="atas">
+                <img src="atas.png" alt="Registro de Atas">
+                <h2>Atas Utilizadas</h2>
+                <p>Abaixo estão listadas as atas de registro de preços utilizadas para a aquisição dos equipamentos de infraestrutura:</p>
+                
+                <ul class="lista-atas">
+
+                     <li>
+                        <span class="ata-label">Ata 01 Cadastrada - Servidor </span>
+                        <a href="https://pncp.gov.br/app/atas/25648387000118/2025/250/1" target="_blank" class="ata-link"><i class="fas fa-file-pdf"></i> Visualizar Documento</a>
+                
+                    <li>
+                        <span class="ata-label">Ata 02 Associada- Desktops</span>
+                        <a href="https://pncp.gov.br/app/atas/00348003000110/2025/454/2" target="_blank" class="ata-link"><i class="fas fa-file-pdf"></i> Visualizar Documento</a>
+                    </li>
+                    <li>
+                        <span class="ata-label">Ata 03 Associada - Cabo CAT6</span>
+                        <a href="https://pncp.gov.br/app/atas/04892707000100/2025/453/1" target="_blank" class="ata-link"><i class="fas fa-file-pdf"></i> Visualizar Documento</a>
+                    </li>
+                  
+                    <li>
+                        <span class="ata-label">Ata 04 Associada - Acess Points </span>
+                        <a href="https://pncp.gov.br/app/atas/10735145000194/2025/240/1" target="_blank" class="ata-link"><i class="fas fa-file-pdf"></i> Visualizar Documento</a>
+                    </li>
+                    <li>
+                        <span class="ata-label">Ata 05 Associada - Swithces </span>
+                        <a href="https://pncp.gov.br/app/atas/01263896000164/2025/173/3" target="_blank" class="ata-link"><i class="fas fa-file-pdf"></i> Visualizar Documento</a>
+                    </li>
+                
+                </ul>
+            </div>
+
+            <div class="imagem-container" id="orcamento">
+                <img src="orcamento.png" alt="Planilha Orçamentária" onerror="this.style.display='none'"> 
+                
+                <h2>Orçamento do Projeto</h2>
+                <p>Detalhamento financeiro para a implementação da infraestrutura de redes e equipamentos:</p>
+
+                <div class="tabela-container">
+                    <table class="tabela-orcamento">
+                        <thead>
+                            <tr>
+                                <th>Item</th>
+                                <th>Descrição</th>
+                                <th>Custo Estimado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Servidor</td>
+                                <td> Servidor XFUSION modelo 2288H V7- valor unitário R$128.499</td>
+                                <td>R$ 128.499,00</td>
+                            </tr>
+                            <tr>
+                                  <tr>
+                                <td>Desktops</td>
+                                <td>25 desktops (R$ 4.619,85 cada)</td>
+                                <td>R$ 115.496,25</td>
+                            </tr>
+                                <td>Switches</td>
+                                <td>6 Switches com 24 portas (R$ 6.390,00 cada)</td>
+                                <td>R$ 38.340,00</td>
+                            </tr>
+                            <tr>
+                                <td>Cabos</td>
+                                <td>600m de cabo CAT6 (R$2,40 por metro)</td>
+                                <td>R$ 1440,00</td>
+                            </tr>
+                    
+                            </tr>
+                              <tr>
+                                <td>Acess Point</td>
+                                <td>6 Access points com injetor POE e RJ45 Cat6 (R$ 1.698,99 cada)</td>
+                                <td>R$ 10.193,94</td>
+                            </tr>
+                               <tr class="total-row">
+                                <td colspan="2">TOTAL</td>
+                                <td>R$ 293.969,19</td>
+                        </tbody>
+                        
+                    </table>
+                     <li>
+                        <span class="ata-label">        </span>
+                        <a href="https://github.com/DCOMP-UFS/2025-2-lab-t2-projeto-condominio-campus_itabaiana_prof_alberto_carvalho/blob/main/lab-trabalho-grupo%20(3).pdf" target="_blank" class="ata-link"><i class="fas fa-file-pdf"></i> Visualizar Planilha Detalhada</a>
+                    </li>
+                </div>
             </div>
             
         </section>
