@@ -53,14 +53,14 @@ header {
     margin: 0;
     padding: 0;
     display: flex; 
-    gap: 25px; 
+    gap: 20px; /* Reduzi levemente o gap para caber os novos itens */
 }
 
 .nav-links li a {
     text-decoration: none;
     color: #e2e8f0;
     font-weight: 500;
-    font-size: 1rem;
+    font-size: 0.95rem; /* Ajuste leve no tamanho */
     transition: color 0.3s ease;
     font-family: 'Montserrat', sans-serif;
 }
@@ -214,7 +214,7 @@ footer {
 }
 
 .social-link:hover {
-    background-color: #E1306C; /* Cor oficial do Instagram */
+    background-color: #E1306C;
 }
 
 .social-link i {
@@ -234,8 +234,7 @@ footer {
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* --- NOVOS ESTILOS DO CARROSSEL --- */
-
+/* --- ESTILOS DO CARROSSEL --- */
 .carousel-wrapper {
     display: flex;
     align-items: center;
@@ -246,7 +245,6 @@ footer {
     margin-bottom: 20px;
 }
 
-/* Botões de Navegação (Estilo igual ao btn-hero) */
 .nav-btn {
     background-color: #0d9488; 
     color: white;
@@ -271,15 +269,17 @@ footer {
     box-shadow: 0 6px 15px rgba(20, 184, 166, 0.4);
 }
 
-/* Imagem do slide com tamanho controlado */
 #lab-img {
     margin-bottom: 0;
     max-height: 500px; 
-    object-fit: contain; /* Garante que a imagem inteira apareça */
+    object-fit: contain;
     transition: opacity 0.2s ease-in-out;
 }
 
-/* Responsividade */
+#lab-nome {
+    transition: opacity 0.2s ease-in-out;
+}
+
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
@@ -288,14 +288,147 @@ footer {
     .hero h1 { font-size: 2.2rem; }
     .imagem-container { padding: 20px; }
     .imagem-container p { padding: 0; text-align: left; }
+    .carousel-wrapper { flex-wrap: wrap; }
+    .nav-btn { order: 2; width: 60px; height: 60px; }
+}
 
-    /* Ajuste do carrossel no mobile */
-    .carousel-wrapper {
-        flex-wrap: wrap;
-    }
-    .nav-btn {
-        order: 2; /* Botões vão para baixo da imagem no celular */
-        width: 60px; /* Botões maiores para dedo */
-        height: 60px;
-    }
+.descricao-dinamica {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #334155;
+    background-color: #f8fafc; 
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 5px solid #0d9488; 
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    margin-top: 15px;
+    min-height: 100px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s ease-in-out;
+}
+
+#planta-img { transition: opacity 0.3s ease-in-out; }
+
+.btn-container-center {
+    display: flex;
+    justify-content: center;
+    margin-top: -10px;
+    margin-bottom: 30px;
+}
+
+.btn-toggle {
+    background-color: #38bdf8;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(56, 189, 248, 0.3);
+}
+
+.btn-toggle:hover {
+    background-color: #0284c7;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(56, 189, 248, 0.4);
+}
+
+/* --- NOVOS ESTILOS: LISTA DE ATAS --- */
+.lista-atas {
+    list-style: none;
+    padding: 0;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.lista-atas li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f1f5f9;
+    padding: 15px 20px;
+    border-radius: 10px;
+    transition: transform 0.2s ease, background 0.2s ease;
+    border-left: 4px solid #38bdf8;
+}
+
+.lista-atas li:hover {
+    transform: translateX(5px);
+    background-color: #e2e8f0;
+}
+
+.ata-label {
+    font-weight: 700;
+    color: #0f172a;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.ata-link {
+    text-decoration: none;
+    color: #0d9488;
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.ata-link:hover {
+    color: #0f172a;
+    text-decoration: underline;
+}
+
+/* --- NOVOS ESTILOS: TABELA DE ORÇAMENTO --- */
+.tabela-container {
+    overflow-x: auto; /* Permite rolagem no celular */
+    margin-top: 20px;
+}
+
+.tabela-orcamento {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Montserrat', sans-serif;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+}
+
+.tabela-orcamento th, 
+.tabela-orcamento td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.tabela-orcamento th {
+    background-color: #0f172a;
+    color: white;
+    font-weight: 700;
+}
+
+.tabela-orcamento tr:hover {
+    background-color: #f8fafc;
+}
+
+.tabela-orcamento .total-row {
+    background-color: #0d9488;
+    color: white;
+    font-weight: 800;
+}
+
+.tabela-orcamento .total-row td {
+    border-bottom: none;
 }
